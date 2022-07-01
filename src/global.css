@@ -1,0 +1,225 @@
+:root{
+--cyan500:#26c0ab;
+
+--cyan600:#00494d;
+--cyan-cinza400:#5e7a7d;
+--cyan-cinza300:#7f9c9f;
+--cyan-cinza200:#c5e4e7;
+--cyan-cinza100:	#f4fafa;
+--white: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--cyan-cinza200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+body, input, textarea, button{
+  font-family: 'Space Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper{
+  max-width: 910px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper header{
+  margin: 0 auto;
+
+}
+
+.holder{
+  margin-top: 90px;
+  background: var(--white);
+  border-radius: 15px;
+  display: flex;
+  gap:50px;
+  padding: 30px;
+}
+.billInputs, .tipAmount, .people{
+  padding:18px;
+  display: flex;
+  flex-direction: column;
+}
+.billInputs label, .tipAmount span, .people label{
+  color:var(--cyan-cinza400);
+  margin-bottom: 8px;
+}
+
+.inputDefault{
+  border:none;
+  padding: 5px 10px;
+  font-size: 24px;
+  text-align: right;
+  border-radius: 5px;
+  color: var(--cyan600);
+  outline: none;
+  border:2px solid var(--cyan-cinza100);
+}
+
+.billInputs input{
+  background: var(--cyan-cinza100) url(./assets/icon-dollar.svg) no-repeat 20px 15px;
+  color:var(--cyan600)
+}
+.billInputs input:focus, .percentAmount input:focus, .people input:focus{
+  border-color: var(--cyan500);
+}
+
+.tipAmount span{
+  color:var(--cyan-cinza400);
+  margin-bottom: 5px;
+}
+
+
+.percentAmount{
+  display: grid;
+  grid-template-columns: 115px 115px 115px;
+  gap: 15px;
+}
+.percentAmount button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--cyan600);
+  color:var(--cyan-cinza100);
+  border: none;
+  padding: 7px;
+  font-size: 24px;
+  border-radius: 5px;
+  transition:0.2s;
+}
+
+.percentAmount button:hover{
+  background:var(--cyan500);
+  cursor: pointer;
+}
+
+.percentAmount button.active{
+  background:var(--cyan500);
+  color:var(--cyan600)
+}
+
+.percentAmount input{
+  background-color:var(--cyan-cinza100);
+  color:var(--cyan500);
+}
+
+.percentAmount input::placeholder{
+  color:var(--cyan-cinza400);
+}
+
+.people div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.people div span{
+  color:#c43535
+}
+
+.people input{
+  background: var(--cyan-cinza100) url(./assets/icon-person.svg) no-repeat 20px 15px;
+}
+
+.results{
+  background: var(--cyan600);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 45px;
+  width: 300px;
+}
+
+.resultPerPerson{
+  margin-bottom: 50px;
+}
+
+.resultPerPerson, .totalResult{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.resultPerPerson span, .totalResult span{
+  color: var(--cyan-cinza100);
+}
+
+.resultPerPerson span:last-child, .totalResult span:last-child{
+  font-size: 44px;
+  line-height: 40px;
+  color: var(--cyan500);
+}
+.resultPerPerson small, .totalResult small{
+  color:var(--cyan-cinza300)
+}
+
+.results button{
+  display: flex;
+  background:var(--cyan500);
+  cursor: pointer;
+  border:none;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  font-size: 21px;
+  color: var(--cyan600);
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.results button:hover{
+  background:var(--cyan-cinza200);
+}
+
+@media only screen and (max-width:940px){
+
+  .wrapper{
+    max-width: 348px;
+    margin: 0 auto;
+    margin-top:5%;
+    display: flex;
+    flex-direction: column;
+  }
+  .holder{
+    margin-top: 30px;
+    background: var(--white);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:10px ;
+    padding: 30px;
+  
+  }
+  .percentAmount{
+    display: grid;
+    grid-template-columns: 115px 115px;
+    gap: 15px;
+  }
+  .results{
+    background: var(--cyan600);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    gap: 30px;
+    width: 249px;
+  }
+  .resultPerPerson{
+    margin-bottom:0;
+  }
+  
+  
+}
+
