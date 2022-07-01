@@ -99,7 +99,8 @@ body, input, textarea, button{
 }
 
 .percentAmount button:hover{
-  background:var(--cyan500);
+  background:var(--cyan-cinza200);
+  color:var(--cyan600);
   cursor: pointer;
 }
 
